@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/App-Beca-Permanencia/static/css/main.7bd844a6.css",
-    "main.js": "/App-Beca-Permanencia/static/js/main.449f3c9f.js",
+    "main.js": "/App-Beca-Permanencia/static/js/main.6522c64b.js",
     "static/js/453.36a76898.chunk.js": "/App-Beca-Permanencia/static/js/453.36a76898.chunk.js",
     "static/media/fondo-de-arte-digital-de-japon (1).jpg": "/App-Beca-Permanencia/static/media/fondo-de-arte-digital-de-japon (1).8b01d03233a100f0ed05.jpg",
     "static/media/logo.svg": "/App-Beca-Permanencia/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/App-Beca-Permanencia/index.html",
     "main.7bd844a6.css.map": "/App-Beca-Permanencia/static/css/main.7bd844a6.css.map",
-    "main.449f3c9f.js.map": "/App-Beca-Permanencia/static/js/main.449f3c9f.js.map",
+    "main.6522c64b.js.map": "/App-Beca-Permanencia/static/js/main.6522c64b.js.map",
     "453.36a76898.chunk.js.map": "/App-Beca-Permanencia/static/js/453.36a76898.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bd844a6.css",
-    "static/js/main.449f3c9f.js"
+    "static/js/main.6522c64b.js"
   ]
 }
