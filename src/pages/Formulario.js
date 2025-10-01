@@ -11,7 +11,7 @@ function Formulario() {
   const [universidadPriorizacion, setUniversidadPriorizacion] = useState('');
   const [universidadSelectividad, setUniversidadSelectividad] = useState('');
   const [pobreza, setPobreza] = useState('no');
-  const [otraCondicion, setOtraCondicion] = useState(0);
+  const [otraCondicion, setOtraCondicion] = useState('Ninguna');
 
   // State for scores
   const [scoreRA, setScoreRA] = useState(0);
@@ -33,19 +33,19 @@ function Formulario() {
 
   // C. Condiciones Priorizables - Otras condiciones
   const otrasCondicionesOptions = [
-    { label: 'Ninguna', value: 0 },
-    { label: 'Discapacidad (D)', value: 5 },
-    { label: 'Bomberos activos e hijos de bomberos (B)', value: 5 },
-    { label: 'Voluntarios reconocidos por el Ministerio de la Mujer y Poblaciones Vulnerables (V)', value: 5 },
-    { label: 'Pertenencia a comunidades nativas amazónicas, campesinas o pueblo afroperuano (IA)', value: 5 },
-    { label: 'Licenciados del Servicio Militar Voluntario (L)', value: 5 },
-    { label: 'Población expuesta a metales pesados y otras sustancias químicas (PEM)', value: 5 },
-    { label: 'Víctima de la violencia habida en el país durante los años 1980-200 (RE)', value: 5 },
-    { label: 'Pertenecer al ámbito de intervención directa y de influencia del VRAEM (VR)', value: 5 },
-    { label: 'Pertenecer al ámbito geográfico de la zona del Huallaga (H)', value: 5 },
-    { label: 'Población beneficiaria de la Ley N° 31405 (orfandad)', value: 5 },
-    { label: 'Desprotección familiar (DF)', value: 5 },
-    { label: 'Agente Comunitario de Salud (ACS)', value: 5 },
+    { label: 'Ninguna' },
+    { label: 'Discapacidad (D)' },
+    { label: 'Bomberos activos e hijos de bomberos (B)' },
+    { label: 'Voluntarios reconocidos por el Ministerio de la Mujer y Poblaciones Vulnerables (V)' },
+    { label: 'Pertenencia a comunidades nativas amazónicas, campesinas o pueblo afroperuano (IA)' },
+    { label: 'Licenciados del Servicio Militar Voluntario (L)' },
+    { label: 'Población expuesta a metales pesados y otras sustancias químicas (PEM)' },
+    { label: 'Víctima de la violencia habida en el país durante los años 1980-200 (RE)' },
+    { label: 'Pertenecer al ámbito de intervención directa y de influencia del VRAEM (VR)' },
+    { label: 'Pertenecer al ámbito geográfico de la zona del Huallaga (H)' },
+    { label: 'Población beneficiaria de la Ley N° 31405 (orfandad)' },
+    { label: 'Desprotección familiar (DF)' },
+    { label: 'Agente Comunitario de Salud (ACS)' },
   ];
 
   // --- Effects to calculate scores when inputs change ---
@@ -92,7 +92,7 @@ function Formulario() {
 
   // C2. Otras Condiciones
   useEffect(() => {
-    setScoreOC(parseInt(otraCondicion));
+    setScoreOC(otraCondicion !== 'Ninguna' ? 5 : 0);
   }, [otraCondicion]);
 
   // Total Score Calculation
@@ -193,7 +193,7 @@ function Formulario() {
               Otras Condiciones Priorizables (Máx: 5)
             </label>
             <select id="otraCondicion" value={otraCondicion} onChange={e => setOtraCondicion(e.target.value)}>
-              {otrasCondicionesOptions.map(opt => <option key={opt.label} value={opt.value}>{opt.label}</option>)}
+              {otrasCondicionesOptions.map(opt => <option key={opt.label} value={opt.label}>{opt.label}</option>)}
             </select>
             <p><small>Solo puede elegir una opción con un máximo de 5 puntos.</small></p>
           </div>
